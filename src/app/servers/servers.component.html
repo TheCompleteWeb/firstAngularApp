@@ -3,7 +3,13 @@
        (input)="onUpdateServerName($event)"> -->
 <input type="text" class="form-control"
        [(ngModel)]="serverName">
-<!-- <p>{{serverName}}</p> -->
+<button
+    class="btn btn-primary"
+    [disabled] ="!userName"
+    (click)="resetNameField()">Reset a name text</button>
+<input type="text" class="form-control"
+       [(ngModel)]="userName">
+<p>{{userName}}</p>
 <button 
     class="btn btn-primary"
     [disabled]="!allowNewServer"
