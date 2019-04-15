@@ -17,6 +17,8 @@ export class ServersComponent implements OnInit {
   userName="";
   serverCreated = false;
   servers = ['Testserver','Testserver 2']
+  toggleBool = false;
+  toggleBools = []
 
   constructor() { 
     setTimeout(()=>{
@@ -40,5 +42,14 @@ export class ServersComponent implements OnInit {
 
   resetNameField() {
     this.userName= "";
+  }
+
+  toggleBtn(){
+    if(this.toggleBool == false)
+      this.toggleBool= true;
+    else
+      this.toggleBool = false;
+
+    this.toggleBools.push(new Date().getTime());
   }
 }

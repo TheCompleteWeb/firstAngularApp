@@ -27,3 +27,13 @@
 <!-- <p>{{serverCreationStatus}}</p>  -->
 <app-server *ngFor="let server of servers"></app-server>
 
+<button
+    class="btn btn-primary"
+    (click)="toggleBtn()">
+    Toggle
+</button>
+<p *ngIf="toggleBool">It is a toggle paragraph</p>
+<!-- <p *ngFor="let toggleBool of toggleBools">{{toggleBools}}</p> -->
+<div *ngFor="let logs of toggleBools"
+    [ngStyle]="{backgroundColor: logs > 5 ? 'blue' : 'transparent'}">
+    {{ logs }}</div>
